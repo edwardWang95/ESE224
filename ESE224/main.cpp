@@ -7,9 +7,22 @@
 //
 
 #include <iostream>
+#include "HW6.hpp"
+
+void startHW6();
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+    startHW6();
+}
+
+void startHW6(){
+    HW6::Pesos pesos;
+    HW6::HouseHold houseHold;
+    HW6::Rocket rocket;
+    HW6::Suture suture;
+    //pesos.startPesosConversion();
+    //houseHold.getAndCalcAvgIncome();
+    //houseHold.getAndCalcAvgIncomeEOF();
+    //rocket.getRocketFallTime();
+    suture.displayPercentages();
 }
