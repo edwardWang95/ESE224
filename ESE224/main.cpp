@@ -8,11 +8,13 @@
 
 #include <iostream>
 #include "HW6.hpp"
+#include "HW8.hpp"
 
 void startHW6();
+void startHW8();
 
 int main(int argc, const char * argv[]) {
-    startHW6();
+    startHW8();
 }
 
 void startHW6(){
@@ -25,4 +27,9 @@ void startHW6(){
     //houseHold.getAndCalcAvgIncomeEOF();
     //rocket.getRocketFallTime();
     suture.displayPercentages();
+}
+
+void startHW8(){
+    HW8::chapter6::EP_22 ep22;
+    ep22.execute();
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		637A2DD61C90E9A00059A234 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 637A2DD51C90E9A00059A234 /* main.cpp */; };
 		637A2DE21C90EDE40059A234 /* HW6.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 637A2DE01C90EDE40059A234 /* HW6.cpp */; };
+		63E750DC1CB62BB80084C10D /* HW8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63E750DA1CB62BB80084C10D /* HW8.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		637A2DD51C90E9A00059A234 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		637A2DE01C90EDE40059A234 /* HW6.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HW6.cpp; path = HW6/HW6.cpp; sourceTree = "<group>"; };
 		637A2DE11C90EDE40059A234 /* HW6.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HW6.hpp; path = HW6/HW6.hpp; sourceTree = "<group>"; };
+		63E750DA1CB62BB80084C10D /* HW8.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HW8.cpp; sourceTree = "<group>"; };
+		63E750DB1CB62BB80084C10D /* HW8.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HW8.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				637A2DD51C90E9A00059A234 /* main.cpp */,
+				63E750D91CB62BA10084C10D /* HW8 */,
 				637A2DDC1C90E9B60059A234 /* HW6 */,
 			);
 			path = ESE224;
@@ -73,6 +77,15 @@
 				637A2DE11C90EDE40059A234 /* HW6.hpp */,
 			);
 			name = HW6;
+			sourceTree = "<group>";
+		};
+		63E750D91CB62BA10084C10D /* HW8 */ = {
+			isa = PBXGroup;
+			children = (
+				63E750DA1CB62BB80084C10D /* HW8.cpp */,
+				63E750DB1CB62BB80084C10D /* HW8.hpp */,
+			);
+			name = HW8;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E750DC1CB62BB80084C10D /* HW8.cpp in Sources */,
 				637A2DE21C90EDE40059A234 /* HW6.cpp in Sources */,
 				637A2DD61C90E9A00059A234 /* main.cpp in Sources */,
 			);
@@ -251,6 +265,7 @@
 				637A2DDB1C90E9A00059A234 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
