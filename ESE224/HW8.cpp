@@ -107,8 +107,7 @@ void HW8::chapter6::EP_24::EP_24::execute(){
 }
 
 ///////////////////////////////////////////////////////////////
-//Project 1
-
+//Project 1 and 2 code is location in main.cpp
 
 
 

@@ -13,11 +13,41 @@
  */
 void sort_string(string  strs[], int size);
 int main(int argc, const char * argv[]) {
-    HW9::Project::SortArray sortArray;
-    sortArray.execute();
+    //HW9::Project::SortArray sortArray;
+    //sortArray.execute();
+    
+    //File
+    string fileName;
+    ifstream inputFile;
+    ofstream outputFile;
+    
+    int fileSize;
+    string* fileArrayPointer;   //use pointer to reference array
+
+    cout << "Enter file name: ";
+    cin >> fileName;
+    
+    cout << "Enter file size: ";
+    cin >> fileSize;
+    fileArrayPointer = new string[fileSize];
+    
+    inputFile.open(fileName);
+    if(!inputFile.fail()){
+        cout << "Succesfully opened file." << endl;
+        //Fill string array with each line
+        sort_string(fileArrayPointer, fileSize);
+    }else{
+        cout << "Failed to open file." << endl;
+    }
+    
+    //close streams after completing tasks
+    inputFile.close();
+    outputFile.close();
 }
 void sort_string(string  strs[], int size){
-    
+    for(int i=0;i<size;i++){
+        
+    }
 }
 
 /////////////////////////////////////////////////////////////////////
