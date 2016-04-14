@@ -11,12 +11,15 @@
 /*
  Write a main() program to read strings from a file (one per line), and use a function below to sort the strings, then write the sorted strings to another file
  */
+void executeSortString();
 void sort_string(string  strs[], int size);
 void outputSortedString(ofstream outputFile, string strs[], int size);
 int main(int argc, const char * argv[]) {
-    //HW9::Project::SortArray sortArray;
-    //sortArray.execute();
-    
+    HW9::Project::SortArray sortArray;
+    sortArray.execute();
+}
+
+void executeSortString(){
     //File
     string fileName;
     ifstream inputFile;
@@ -53,6 +56,7 @@ int main(int argc, const char * argv[]) {
     inputFile.close();
     outputFile.close();
 }
+
 void sort_string(string  strs[], int size){
     for(int i=0;i<size;i++){
         
@@ -91,7 +95,7 @@ void HW9::Project::SortArray::selectionSort(){
         smallestNum = testArray[i];
         indexOfSmallest = i;
         //Find the smallest number after index of i
-        for(int j=i+1;j<=8;j++){
+        for(int j=i+1;j<8;j++){
             if(smallestNum>testArray[j]){
                 smallestNum = testArray[j];
                 indexOfSmallest = j;
@@ -117,15 +121,16 @@ void HW9::Project::SortArray::printArray(){
 //Binary Search
 void HW9::Project::SortArray::binarySearch(int wantedValue){
     mid = 8/2;
-    setBottomAndTop();
+    top = 7;
+    bottom = 0;
     printMidTopBottom();
     while(testArray[mid]!=wantedValue){
         if(testArray[mid]<wantedValue){
-            mid = top;
+            bottom = mid;
             setBottomAndTop();
             cout << "Move to top" << endl;
-        }else{
-            mid = bottom;
+        }else if(testArray[mid]>wantedValue){
+            top = mid;
             setBottomAndTop();
             cout << "Move to bottom" << endl;
         }
@@ -134,8 +139,7 @@ void HW9::Project::SortArray::binarySearch(int wantedValue){
 }
 
 void HW9::Project::SortArray::setBottomAndTop(){
-    bottom = mid-1;
-    top = mid+1;
+    mid = ((top-bottom)/2)+bottom;
 }
 
 void HW9::Project::SortArray::printMidTopBottom(){
