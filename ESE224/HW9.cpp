@@ -8,62 +8,55 @@
 
 #include "HW9.hpp"
 
-/*
- Write a main() program to read strings from a file (one per line), and use a function below to sort the strings, then write the sorted strings to another file
- */
-void executeSortString();
-void sort_string(string  strs[], int size);
-bool isCurrWordBeforeNext(string curr, string next);
-void outputSortedString(ofstream outputFile, string strs[], int size);
-int main(int argc, const char * argv[]) {
-    HW9::Project::SortArray sortArray;
-    //sortArray.execute();
-    
-    string array[4] = {"Hello","There", "Hell","Apples"};
-    for(int i=0;i<4;i++){
-        cout << array[i] << " - ";
-    }
-    cout << endl;
-    sort_string(array, 4);
-    for(int i=0;i<4;i++){
-        cout << array[i] << " - ";
-    }
-    cout << endl;
-}
-
-void executeSortString(){
+void HW9::Project::SortStringAlphabetically::executeFileAlphabetize(){
     //File
     string fileName;
     ifstream inputFile;
     ofstream outputFile;
     
     int fileSize;
-    string* fileArrayPointer;   //use pointer to reference array
-    int counter=0;
-    int inputString;
+    int index=0;
+    string inputString;
     
-    cout << "Enter file name: ";
-    cin >> fileName;
+    /*
+     cout << "Enter file size: ";
+     cin >> fileSize;
+     */
     
-    cout << "Enter file size: ";
-    cin >> fileSize;
-    fileArrayPointer = new string[fileSize];
+    //TESTING
+    fileSize = 8;
+    
+    string *stringArray = new string[fileSize]; //setup array
+    
+    /*
+     cout << "Enter file name: ";
+     cin >> fileName;
+     */
+    //TESTING
+    fileName = "/Users/edwardwang/Documents/School/ESE224/TEST.txt";
     
     inputFile.open(fileName);
     if(!inputFile.fail()){
         cout << "Succesfully opened file." << endl;
         //Fill string array with each line
-        while(!inputFile.eof()){
+        while(!inputFile.eof() && index<fileSize){
             inputFile >> inputString;
-            fileArrayPointer[counter] = inputString;
-            counter++;
+            cout << inputString << endl;
+            stringArray[index] = inputString;
+            index++;
         }
         //sort string
-        sort_string(fileArrayPointer, fileSize);
+        sort_string(stringArray, fileSize);
     }else{
         cout << "Failed to open file." << endl;
     }
     
+    //output array to textfile
+    outputFile.open(fileName);
+    for(int i=0;i<fileSize;i++){
+        outputFile << stringArray[i] << " " << endl;;
+    }
+
     //close streams after completing tasks
     inputFile.close();
     outputFile.close();
@@ -74,7 +67,7 @@ void executeSortString(){
  Returns true: current string is alphabetically before next.
  Returns false: current string should be after next.
  */
-bool isCurrWordBeforeNext(string curr, string next){
+bool HW9::Project::SortStringAlphabetically::isCurrWordBeforeNext(string curr, string next){
     int loopIndex;
     int charIndex = 0;
     char currChar;
@@ -103,7 +96,7 @@ bool isCurrWordBeforeNext(string curr, string next){
 }
 
 //Sort using selection sort to sort alphabetically
-void sort_string(string  strs[], int size){
+void HW9::Project::SortStringAlphabetically::sort_string(string strs[], int size){
     string smallestString;
     int smallestIndex = 0;
     string temp;
@@ -123,11 +116,7 @@ void sort_string(string  strs[], int size){
     }
 }
 
-void outputSortedString(ofstream outputFile, string strs[], int size){
-    for(int i=0;i<size;i++){
-        
-    }
-}
+
 /////////////////////////////////////////////////////////////////////
 //Initialize streams and get recieve each line of file
 HW9::chapter7::EP_17::EP_17(){

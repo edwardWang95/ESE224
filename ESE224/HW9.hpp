@@ -33,6 +33,18 @@ namespace HW9{
     }
     
     namespace Project{
+        
+        /*
+         Write a main() program to read strings from a file (one per line), and use a function below to sort the strings, then write the sorted strings to another file
+         */
+        class SortStringAlphabetically{
+        private:
+            void sort_string(string strs[], int size);
+            bool isCurrWordBeforeNext(string curr, string next);
+        public:
+            void executeFileAlphabetize();
+        };
+        
         /*
          Given an array of 34, 30, 45, 66, 90, 85, 78, 6
          -Write the sequence of numbers after each exchange step during selection sort
