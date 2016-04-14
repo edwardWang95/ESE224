@@ -8,6 +8,34 @@
 
 #include "HW9.hpp"
 
+
+void HW9::chapter7::EP_17::execute(){
+    reorder(x, y, size);
+}
+
+void HW9::chapter7::EP_17::reorder(double x[], double y[], int size){
+    int smallestNum;
+    int smallestIndex;
+    int temp;
+    for(int i=0;i<size;i++){
+        smallestNum = x[i];
+        smallestIndex = i;
+        for(int j=0;j<size;j++){
+            if(x[i] > x[j]){
+                //swap the numbers for both x and y into ascending order
+                temp = x[i];
+                x[i] = x[j];
+                x[j] = temp;
+                
+                temp = y[i];
+                y[i] = y[j];
+                y[j] = temp;
+            }
+        }
+    }
+}
+
+/////////////////////////////////////////////////////////////////////
 void HW9::Project::SortStringAlphabetically::executeFileAlphabetize(){
     //File
     string fileName;
@@ -115,18 +143,6 @@ void HW9::Project::SortStringAlphabetically::sort_string(string strs[], int size
         strs[smallestIndex] = temp;
     }
 }
-
-
-/////////////////////////////////////////////////////////////////////
-//Initialize streams and get recieve each line of file
-HW9::chapter7::EP_17::EP_17(){
-    
-}
-
-void HW9::chapter7::EP_17::reorder(double x[], double y[], int size){
-    
-}
-
 
 /////////////////////////////////////////////////////////////////////
 void HW9::Project::SortArray::execute(){
