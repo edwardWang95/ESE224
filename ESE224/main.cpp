@@ -24,9 +24,14 @@ void printVector(vector<double> &vector);
 void average(vector<double> vec, double &all_avg);
 void average_row(vector<vector< double> > vec, vector<double> & r_avg);
 
+/*
 int main(int argc, const char * argv[]) {
-    startHW8();
+    //startHW8();
+    int i, &ri = i;
+    i = 5; ri = 10;
+    std::cout << i << " " << ri << std::endl;
 }
+*/
 
 void startHW6(){
     HW6::Pesos pesos;
