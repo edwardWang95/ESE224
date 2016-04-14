@@ -12,6 +12,7 @@
  Write a main() program to read strings from a file (one per line), and use a function below to sort the strings, then write the sorted strings to another file
  */
 void sort_string(string  strs[], int size);
+void outputSortedString(ofstream outputFile, string strs[], int size);
 int main(int argc, const char * argv[]) {
     //HW9::Project::SortArray sortArray;
     //sortArray.execute();
@@ -23,7 +24,9 @@ int main(int argc, const char * argv[]) {
     
     int fileSize;
     string* fileArrayPointer;   //use pointer to reference array
-
+    int counter=0;
+    int inputString;
+    
     cout << "Enter file name: ";
     cin >> fileName;
     
@@ -35,6 +38,12 @@ int main(int argc, const char * argv[]) {
     if(!inputFile.fail()){
         cout << "Succesfully opened file." << endl;
         //Fill string array with each line
+        while(!inputFile.eof()){
+            inputFile >> inputString;
+            fileArrayPointer[counter] = inputString;
+            counter++;
+        }
+        //sort string
         sort_string(fileArrayPointer, fileSize);
     }else{
         cout << "Failed to open file." << endl;
@@ -45,6 +54,11 @@ int main(int argc, const char * argv[]) {
     outputFile.close();
 }
 void sort_string(string  strs[], int size){
+    for(int i=0;i<size;i++){
+        
+    }
+}
+void outputSortedString(ofstream outputFile, string strs[], int size){
     for(int i=0;i<size;i++){
         
     }
