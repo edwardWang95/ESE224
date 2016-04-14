@@ -19,12 +19,15 @@ using namespace std;
 namespace HW9{
     namespace chapter7{
         /*
-         Write a function that receives two one-dimensional array that correspond to the flight-path angles and the corresponding coefficients of lift. The function should sort the flight-path angles into ascending order while maintaining the correspon- dence between the flight-path angles and the corresponding coefficients of lift. As- sume that the corresponding function prototype is
+         Write a function that receives two one-dimensional array that correspond to the flight-path angles and the corresponding coefficients of lift. The function should sort the flight-path angles into ascending order while maintaining the correspon- dence between the flight-path angles and the corresponding coefficients of lift.
          */
         class EP_17{
         private:
-            
+            double* xPointer;
+            double* yPointer;
+            int size;
         public:
+            EP_17();
             void reorder(double x[], double y[], int size);
         };
     }

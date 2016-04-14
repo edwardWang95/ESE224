@@ -63,6 +63,16 @@ void outputSortedString(ofstream outputFile, string strs[], int size){
         
     }
 }
+/////////////////////////////////////////////////////////////////////
+//Initialize streams and get recieve each line of file
+HW9::chapter7::EP_17::EP_17(){
+    
+}
+
+void HW9::chapter7::EP_17::reorder(double x[], double y[], int size){
+    
+}
+
 
 /////////////////////////////////////////////////////////////////////
 void HW9::Project::SortArray::execute(){
