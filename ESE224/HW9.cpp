@@ -76,7 +76,6 @@ void HW9::Project::SortArray::binarySearch(int wantedValue){
             cout << "Move to bottom" << endl;
         }
         printMidTopBottom();
-        cout << endl;
     }
 }
 
@@ -89,5 +88,6 @@ void HW9::Project::SortArray::printMidTopBottom(){
     cout << "Bottom: " << testArray[bottom] << endl;
     cout << "Mid: " << testArray[mid] << endl;
     cout << "Top: " << testArray[top] << endl;
+    cout << endl;
 }
 
