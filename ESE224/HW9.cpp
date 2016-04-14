@@ -13,10 +13,22 @@
  */
 void executeSortString();
 void sort_string(string  strs[], int size);
+bool isCurrWordBeforeNext(string curr, string next);
 void outputSortedString(ofstream outputFile, string strs[], int size);
 int main(int argc, const char * argv[]) {
     HW9::Project::SortArray sortArray;
-    sortArray.execute();
+    //sortArray.execute();
+    
+    string array[4] = {"Hello","There", "Hell","Apples"};
+    for(int i=0;i<4;i++){
+        cout << array[i] << " - ";
+    }
+    cout << endl;
+    sort_string(array, 4);
+    for(int i=0;i<4;i++){
+        cout << array[i] << " - ";
+    }
+    cout << endl;
 }
 
 void executeSortString(){
@@ -57,11 +69,60 @@ void executeSortString(){
     outputFile.close();
 }
 
+/*
+ Compares the current string alphabetically with next string.
+ Returns true: current string is alphabetically before next.
+ Returns false: current string should be after next.
+ */
+bool isCurrWordBeforeNext(string curr, string next){
+    int loopIndex;
+    int charIndex = 0;
+    char currChar;
+    char nextChar;
+    
+    if(curr.size() >= next.size()){
+        loopIndex = next.size();
+    }else{
+        loopIndex = curr.size();
+    }
+    
+    while(charIndex < loopIndex){
+        currChar = curr.at(charIndex);
+        nextChar = next.at(charIndex);
+        if(currChar < nextChar){    //curr is before
+            return false;
+        }else if(currChar > nextChar){   //curr is after
+            return true;
+        }
+        charIndex++;
+    }
+    if(curr.size() > next.size()){    //curr is after
+        return true;
+    }
+    return false;   //curr is before
+}
+
+//Sort using selection sort to sort alphabetically
 void sort_string(string  strs[], int size){
+    string smallestString;
+    int smallestIndex = 0;
+    string temp;
     for(int i=0;i<size;i++){
-        
+        smallestString = strs[i];
+        for(int j=i+1;j<size;j++){
+            //find smallest string
+            if(isCurrWordBeforeNext(smallestString, strs[j])){
+                smallestString = strs[j];
+                smallestIndex = j;
+            }
+        }
+        //swap the two strings
+        temp = strs[i];
+        strs[i] = strs[smallestIndex];
+        strs[smallestIndex] = temp;
     }
 }
+
 void outputSortedString(ofstream outputFile, string strs[], int size){
     for(int i=0;i<size;i++){
         
