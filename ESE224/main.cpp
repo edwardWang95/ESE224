@@ -9,6 +9,7 @@
 #include <iostream>
 #include "HW6.hpp"
 #include "HW8.hpp"
+#include "HW10.hpp"
 //HW8
 #include <vector>
 #include <string>
@@ -18,20 +19,26 @@ using namespace std;
 
 void startHW6();
 void startHW8();
+void startHW10();
 //HW8
 void parseTextStringToVector(vector<double> &vector,string line);
 void printVector(vector<double> &vector);
 void average(vector<double> vec, double &all_avg);
 void average_row(vector<vector< double> > vec, vector<double> & r_avg);
 
-/*
+
 int main(int argc, const char * argv[]) {
     //startHW8();
+    /*
     int i, &ri = i;
     i = 5; ri = 10;
     std::cout << i << " " << ri << std::endl;
+    */
+    
+    //HW10
+    startHW10();
 }
-*/
+
 
 void startHW6(){
     HW6::Pesos pesos;
@@ -174,4 +181,13 @@ void average_row(vector<vector< double> > vec, vector<double> &r_avg){
         temp = 0.0;   //reset temp
         
     }
+}
+//////////////////////////////////////////////////////////////////////
+void startHW10(){
+    HW10::chapter9::test test;
+    test.execute();
+    HW10::chapter9::Q18 q18;
+    //q18.execute();
+    HW10::chapter9::Q19 q19;
+    //q19.execute();
 }
