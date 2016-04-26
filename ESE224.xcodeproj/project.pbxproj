@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		637A2DD61C90E9A00059A234 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 637A2DD51C90E9A00059A234 /* main.cpp */; };
 		637A2DE21C90EDE40059A234 /* HW6.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 637A2DE01C90EDE40059A234 /* HW6.cpp */; };
+		6390C4581CCEC616008EBA5B /* HW10.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6390C4561CCEC616008EBA5B /* HW10.cpp */; };
 		63D48DCE1CBD9F0F0046DCD1 /* HW9.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D48DCC1CBD9F0F0046DCD1 /* HW9.cpp */; };
 		63E750DC1CB62BB80084C10D /* HW8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63E750DA1CB62BB80084C10D /* HW8.cpp */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,8 @@
 		637A2DD51C90E9A00059A234 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		637A2DE01C90EDE40059A234 /* HW6.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HW6.cpp; path = HW6/HW6.cpp; sourceTree = "<group>"; };
 		637A2DE11C90EDE40059A234 /* HW6.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HW6.hpp; path = HW6/HW6.hpp; sourceTree = "<group>"; };
+		6390C4561CCEC616008EBA5B /* HW10.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HW10.cpp; sourceTree = "<group>"; };
+		6390C4571CCEC616008EBA5B /* HW10.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HW10.hpp; sourceTree = "<group>"; };
 		63D48DCC1CBD9F0F0046DCD1 /* HW9.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HW9.cpp; sourceTree = "<group>"; };
 		63D48DCD1CBD9F0F0046DCD1 /* HW9.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HW9.hpp; sourceTree = "<group>"; };
 		63E750DA1CB62BB80084C10D /* HW8.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HW8.cpp; sourceTree = "<group>"; };
@@ -67,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				637A2DD51C90E9A00059A234 /* main.cpp */,
+				6390C4551CCEC5FE008EBA5B /* HW10 */,
 				63D48DCB1CBD9EF70046DCD1 /* HW9 */,
 				63E750D91CB62BA10084C10D /* HW8 */,
 				637A2DDC1C90E9B60059A234 /* HW6 */,
@@ -81,6 +85,15 @@
 				637A2DE11C90EDE40059A234 /* HW6.hpp */,
 			);
 			name = HW6;
+			sourceTree = "<group>";
+		};
+		6390C4551CCEC5FE008EBA5B /* HW10 */ = {
+			isa = PBXGroup;
+			children = (
+				6390C4561CCEC616008EBA5B /* HW10.cpp */,
+				6390C4571CCEC616008EBA5B /* HW10.hpp */,
+			);
+			name = HW10;
 			sourceTree = "<group>";
 		};
 		63D48DCB1CBD9EF70046DCD1 /* HW9 */ = {
@@ -161,6 +174,7 @@
 				63E750DC1CB62BB80084C10D /* HW8.cpp in Sources */,
 				637A2DE21C90EDE40059A234 /* HW6.cpp in Sources */,
 				637A2DD61C90E9A00059A234 /* main.cpp in Sources */,
+				6390C4581CCEC616008EBA5B /* HW10.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
