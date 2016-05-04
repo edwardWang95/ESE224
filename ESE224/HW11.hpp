@@ -16,6 +16,8 @@
 #include <list>
 #include <stack>
 
+#include <string>
+#include "fruit.h"
 
 using namespace std;
 
@@ -41,9 +43,60 @@ namespace HW11{
         stack<int> intStack;
     public:
         void execute();
-        
     };
     
+    /*
+     Write a base vehicle class (20pt)
+     Protected members: string make, model; double weight; int seating,
+     Public constructors: vehicle(); vehicle(string make, string model);
+     Public member functions: void setweight(double); void setseating(int); double getweight(); int getseating();
+     */
+    class Vehicle{
+    protected:
+        string make;
+        string model;
+        double weight;
+        int seating;
+    public:
+        Vehicle();
+        Vehicle(string make, string model);
+        //Setters
+        void setWeight(double weight);
+        void setSeating(int seating);
+        //Getters
+        double getWeight();
+        int getSeating();
+        string getMake();
+        string getModel();
+    };
+    
+    /*
+     Write a derived SUV class from vehicle, add (20pt)
+     Protected members: double cargo, string content
+     Public constructors: SUV(), SUV(string make, string model, double cargo)
+     Public member function: void setcontent(string); string getcontent();
+     */
+    class SUV: public Vehicle{
+    protected:
+        double cargo;
+        string content;
+    public:
+        SUV();
+        SUV(string make, string model, double cargo);
+        //Setters
+        void setContent(string content);
+        //Getters
+        string getContent();
+        double getCargo();
+    };
+    
+    /*
+     Write a main function that creates 2 vehicles objects, 2 SUV objects, set their weight, seating, content (for SUV objects), then get and print out these variables for each object (20pt)
+     */
+    class Project_3{
+    public:
+        void execute();
+    };
     
 }
 

@@ -10,21 +10,34 @@
 #include "HW6.hpp"
 #include "HW8.hpp"
 #include "HW10.hpp"
+#include "HW11.hpp"
+
 //HW8
 #include <vector>
 #include <string>
 #include <fstream>
+
+//HW11
+#include "fruit.h"
+#include "apple.h"
+#include "banana.h"
+#include "cranberry.h"
 
 using namespace std;
 
 void startHW6();
 void startHW8();
 void startHW10();
+void startHW11();
+
 //HW8
 void parseTextStringToVector(vector<double> &vector,string line);
 void printVector(vector<double> &vector);
 void average(vector<double> vec, double &all_avg);
 void average_row(vector<vector< double> > vec, vector<double> & r_avg);
+
+//HW11
+void startHW11Cranberry();
 
 
 int main(int argc, const char * argv[]) {
@@ -36,8 +49,12 @@ int main(int argc, const char * argv[]) {
     */
     
     //HW10
-    startHW10();
+    //startHW10();
+    
+    //HW11
+    startHW11();
 }
+
 
 
 void startHW6(){
@@ -191,3 +208,39 @@ void startHW10(){
     HW10::chapter9::Q19 q19;
     //q19.execute();
 }
+
+//////////////////////////////////////////////////////////////////////
+
+void startHW11(){
+    //startHW11Cranberry();
+    
+    //List
+    HW11::Project_1 project1;
+    //project1.execute();
+    
+    //Stack
+    HW11::Project_2 project2;
+    //project2.execute();
+    
+    //Vehicle - SUV
+    HW11::Project_3 project3;
+    project3.execute();
+}
+
+/*
+ Use the sample code chap10-fruit-classes, add a cranberry class that shows pink color (including .h, .cpp for cranberry class) then write a main function that creates two additional cranberry objects, and display the color of all 6 fruit objects (20pt)
+ */
+void startHW11Cranberry(){
+    apple a1("apple 1"), a2("apple 2");
+    banana b1("banana 1"), b2("banana 2");
+    cranberry c1("cranberry 1"), c2("cranberry 2");
+    
+    fruit *p[6] =  {&a1, &a2, &b1, &b2, &c1, &c2};
+    
+    for(int i=0; i<6; i++) {
+        cout<<"fruit " << i <<" name and color: ";
+        p[i]->showcolor();
+        cout<<endl;
+    }
+}
+

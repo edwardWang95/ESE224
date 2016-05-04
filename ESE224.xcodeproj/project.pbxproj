@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		636B73D21CD9A71200B41D47 /* HW11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 636B73D01CD9A71200B41D47 /* HW11.cpp */; };
+		63751D1A1CDA91DF00F44A43 /* fruit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63751D181CDA91DF00F44A43 /* fruit.cpp */; };
+		63751D1F1CDA91EE00F44A43 /* apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63751D1B1CDA91EE00F44A43 /* apple.cpp */; };
+		63751D201CDA91EE00F44A43 /* banana.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63751D1D1CDA91EE00F44A43 /* banana.cpp */; };
+		63751D281CDA9E9700F44A43 /* cranberry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63751D271CDA9E9700F44A43 /* cranberry.cpp */; };
 		637A2DD61C90E9A00059A234 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 637A2DD51C90E9A00059A234 /* main.cpp */; };
 		637A2DE21C90EDE40059A234 /* HW6.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 637A2DE01C90EDE40059A234 /* HW6.cpp */; };
 		6390C4581CCEC616008EBA5B /* HW10.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6390C4561CCEC616008EBA5B /* HW10.cpp */; };
@@ -30,6 +34,14 @@
 /* Begin PBXFileReference section */
 		636B73D01CD9A71200B41D47 /* HW11.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HW11.cpp; sourceTree = "<group>"; };
 		636B73D11CD9A71200B41D47 /* HW11.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HW11.hpp; sourceTree = "<group>"; };
+		63751D181CDA91DF00F44A43 /* fruit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fruit.cpp; path = "../../../../../Downloads/lec 24 sp16 chap10 class inheritance/chap10-fruit-classes/fruit.cpp"; sourceTree = "<group>"; };
+		63751D191CDA91DF00F44A43 /* fruit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fruit.h; path = "../../../../../Downloads/lec 24 sp16 chap10 class inheritance/chap10-fruit-classes/fruit.h"; sourceTree = "<group>"; };
+		63751D1B1CDA91EE00F44A43 /* apple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = apple.cpp; path = "../../../../../Downloads/lec 24 sp16 chap10 class inheritance/chap10-fruit-classes/apple.cpp"; sourceTree = "<group>"; };
+		63751D1C1CDA91EE00F44A43 /* apple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = apple.h; path = "../../../../../Downloads/lec 24 sp16 chap10 class inheritance/chap10-fruit-classes/apple.h"; sourceTree = "<group>"; };
+		63751D1D1CDA91EE00F44A43 /* banana.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = banana.cpp; path = "../../../../../Downloads/lec 24 sp16 chap10 class inheritance/chap10-fruit-classes/banana.cpp"; sourceTree = "<group>"; };
+		63751D1E1CDA91EE00F44A43 /* banana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = banana.h; path = "../../../../../Downloads/lec 24 sp16 chap10 class inheritance/chap10-fruit-classes/banana.h"; sourceTree = "<group>"; };
+		63751D261CDA9E4000F44A43 /* cranberry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cranberry.h; sourceTree = "<group>"; };
+		63751D271CDA9E9700F44A43 /* cranberry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cranberry.cpp; sourceTree = "<group>"; };
 		637A2DD21C90E9A00059A234 /* ESE224 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ESE224; sourceTree = BUILT_PRODUCTS_DIR; };
 		637A2DD51C90E9A00059A234 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		637A2DE01C90EDE40059A234 /* HW6.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HW6.cpp; path = HW6/HW6.cpp; sourceTree = "<group>"; };
@@ -56,10 +68,26 @@
 		636B73CF1CD9A60B00B41D47 /* HW11 */ = {
 			isa = PBXGroup;
 			children = (
+				63751D171CDA91C900F44A43 /* Fruit */,
 				636B73D01CD9A71200B41D47 /* HW11.cpp */,
 				636B73D11CD9A71200B41D47 /* HW11.hpp */,
 			);
 			name = HW11;
+			sourceTree = "<group>";
+		};
+		63751D171CDA91C900F44A43 /* Fruit */ = {
+			isa = PBXGroup;
+			children = (
+				63751D181CDA91DF00F44A43 /* fruit.cpp */,
+				63751D191CDA91DF00F44A43 /* fruit.h */,
+				63751D1B1CDA91EE00F44A43 /* apple.cpp */,
+				63751D1C1CDA91EE00F44A43 /* apple.h */,
+				63751D1D1CDA91EE00F44A43 /* banana.cpp */,
+				63751D1E1CDA91EE00F44A43 /* banana.h */,
+				63751D271CDA9E9700F44A43 /* cranberry.cpp */,
+				63751D261CDA9E4000F44A43 /* cranberry.h */,
+			);
+			name = Fruit;
 			sourceTree = "<group>";
 		};
 		637A2DC91C90E9A00059A234 = {
@@ -185,10 +213,14 @@
 			files = (
 				636B73D21CD9A71200B41D47 /* HW11.cpp in Sources */,
 				63D48DCE1CBD9F0F0046DCD1 /* HW9.cpp in Sources */,
+				63751D281CDA9E9700F44A43 /* cranberry.cpp in Sources */,
 				63E750DC1CB62BB80084C10D /* HW8.cpp in Sources */,
+				63751D1A1CDA91DF00F44A43 /* fruit.cpp in Sources */,
+				63751D1F1CDA91EE00F44A43 /* apple.cpp in Sources */,
 				637A2DE21C90EDE40059A234 /* HW6.cpp in Sources */,
 				637A2DD61C90E9A00059A234 /* main.cpp in Sources */,
 				6390C4581CCEC616008EBA5B /* HW10.cpp in Sources */,
+				63751D201CDA91EE00F44A43 /* banana.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
